@@ -1,0 +1,156 @@
+# =================================================
+# NODE & GENERAL PROJECT IGNORE
+# =================================================
+
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment files
+.env
+.env.*                # For multiple env files: .env.dev, .env.prod
+!.env.example         # Allow safe example env file
+
+# NPM / tooling cache
+.npm/
+.cache/
+.parcel-cache/
+.nyc_output/
+
+# Local overrides
+local.env
+.npmrc                # Might contain tokens or local paths
+
+# -------------------------------------------------
+# OS FILES
+# -------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Linux temporary backups
+*~
+
+# =================================================
+# TYPESCRIPT
+# =================================================
+
+# Compiled output directories
+dist/
+build/
+out/
+
+# Compiled JavaScript & sourcemaps
+*.js
+*.js.map
+src/**/*.js
+src/**/*.js.map
+
+# Type declaration maps
+*.d.ts.map
+
+# Declaration files (comment ONLY if building an npm library , not an application)
+*.d.ts
+
+# TypeScript build cache
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+.ts-node/
+
+# =================================================
+# EDITORS & PROJECT SETTINGS
+# =================================================
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# JetBrains IDEs
+.idea/
+
+# Temporary editor files
+*.swp
+*.swo
+
+# VS Code workspace files
+*.code-workspace
+
+# =================================================
+# TESTING & COVERAGE
+# =================================================
+
+coverage/
+*.lcov
+junit/
+*.snap              # Jest snapshot files
+
+# Cypress / Playwright
+cypress/screenshots/
+cypress/videos/
+test-results/
+
+# =================================================
+# FRAMEWORKS & TOOLING
+# =================================================
+
+# Next.js
+.next/
+out/
+
+# React Native / Expo
+.expo/
+.expo-shared/
+android/
+ios/
+
+# Remix
+.build/
+
+# Turbo Repo
+.turbo/
+
+# SvelteKit
+.svelte-kit/
+
+# Bun
+.bun/
+bun.lockb
+
+# =================================================
+# ARCHIVES & PACKAGE FILES
+# =================================================
+
+*.tgz
+*.tar.gz
+
+# =================================================
+# DATABASE & TEMP FILES (Optional)
+# =================================================
+
+*.sqlite
+*.db
+tmp/
+temp/
