@@ -1,0 +1,27 @@
+{
+  "name": "kubernetes-jsm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "deploy": "sh deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamAshishSingh02/KUBERNETES-JSM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IamAshishSingh02/KUBERNETES-JSM/issues"
+  },
+  "homepage": "https://github.com/IamAshishSingh02/KUBERNETES-JSM#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
