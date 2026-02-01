@@ -1,9 +1,15 @@
 # =================================================
-# NODE & GENERAL PROJECT IGNORE
+# NODE & PACKAGE MANAGERS
 # =================================================
 
-# Node modules
+# Dependencies
 node_modules/
+
+# Package manager caches
+.npm/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
 
 # Logs
 logs/
@@ -13,76 +19,84 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+# =================================================
+# ENVIRONMENT & SECRETS
+# =================================================
 
-# Environment files
+# Environment files (never push secrets)
 .env
-.env.*                # For multiple env files: .env.dev, .env.prod
-!.env.example         # Allow safe example env file
+.env.*
+!.env.example
 
-# NPM / tooling cache
-.npm/
-.cache/
-.parcel-cache/
-.nyc_output/
-
-# Local overrides
+# Local override files
 local.env
-.npmrc                # Might contain tokens or local paths
+.npmrc
 
-# -------------------------------------------------
-# OS FILES
-# -------------------------------------------------
+# =================================================
+# BUILD OUTPUTS
+# =================================================
 
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
+# Vite / React build output
+dist/
+build/
 
-# Windows
-Thumbs.db
-ehthumbs.db
-desktop.ini
+# Next.js
+.next/
+out/
 
-# Linux temporary backups
-*~
+# Remix
+.build/
+
+# SvelteKit
+.svelte-kit/
+
+# TurboRepo
+.turbo/
 
 # =================================================
 # TYPESCRIPT
 # =================================================
 
-# Compiled output directories
-dist/
-build/
-out/
-
-# Compiled JavaScript & sourcemaps
-*.js
-*.js.map
-src/**/*.js
-src/**/*.js.map
-
-# Type declaration maps
-*.d.ts.map
-
-# Declaration files (comment ONLY if building an npm library , not an application)
-*.d.ts
-
 # TypeScript build cache
 *.tsbuildinfo
-tsconfig.tsbuildinfo
 .ts-node/
 
 # =================================================
-# EDITORS & PROJECT SETTINGS
+# TESTING & COVERAGE
 # =================================================
 
-# VS Code
-.vscode/
+# Coverage reports
+coverage/
+*.lcov
+
+# Jest snapshots
+*.snap
+
+# Cypress / Playwright
+cypress/screenshots/
+cypress/videos/
+test-results/
+
+# =================================================
+# DOCKER
+# =================================================
+
+# Docker local override files
+docker-compose.override.yml
+
+# =================================================
+# KUBERNETES (Optional)
+# =================================================
+
+# Helm build output (if you use it later)
+charts/*.tgz
+
+# =================================================
+# EDITORS & IDE SETTINGS
+# =================================================
+
+# VS Code (keep only recommended shared configs)
+.vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
 !.vscode/launch.json
@@ -91,66 +105,51 @@ tsconfig.tsbuildinfo
 # JetBrains IDEs
 .idea/
 
-# Temporary editor files
-*.swp
-*.swo
-
-# VS Code workspace files
+# Workspace files
 *.code-workspace
 
-# =================================================
-# TESTING & COVERAGE
-# =================================================
-
-coverage/
-*.lcov
-junit/
-*.snap              # Jest snapshot files
-
-# Cypress / Playwright
-cypress/screenshots/
-cypress/videos/
-test-results/
+# Temporary editor swap files
+*.swp
+*.swo
+*~
 
 # =================================================
-# FRAMEWORKS & TOOLING
+# OS FILES
 # =================================================
 
-# Next.js
-.next/
-out/
+# macOS
+.DS_Store
+**/.DS_Store
 
-# React Native / Expo
-.expo/
-.expo-shared/
-android/
-ios/
-
-# Remix
-.build/
-
-# Turbo Repo
-.turbo/
-
-# SvelteKit
-.svelte-kit/
-
-# Bun
-.bun/
-bun.lockb
+# Windows
+Thumbs.db
+desktop.ini
+ehthumbs.db
 
 # =================================================
-# ARCHIVES & PACKAGE FILES
+# ARCHIVES & TEMP FILES
 # =================================================
 
 *.tgz
 *.tar.gz
+*.zip
+
+tmp/
+temp/
 
 # =================================================
-# DATABASE & TEMP FILES (Optional)
+# DATABASE FILES (Optional)
 # =================================================
 
 *.sqlite
 *.db
-tmp/
-temp/
+
+# =================================================
+# MISC
+# =================================================
+
+# ESLint cache
+.eslintcache
+
+# Node REPL history
+.node_repl_history
